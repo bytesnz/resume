@@ -9,7 +9,7 @@ var resume = {
     "During my previous experiences, I have contributed both ideas, and 1s and 0s to a diverse range of projects, developing software for a range of platforms, from web applications to microcontrollers. I enjoy understanding systems down to the I/O level, developing logical solutions to problems and seeing the solutions through to completion.",
     "I want to advanced our understanding of the environment, by using and sharing my knowledge in technology and software development, to help explore and present new science."
   ],
-  "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialises in developing elegant, responsive web applications for data-rich environments. Looking to contribute towards the advancement of science at Elsevier.",
+  "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialises in coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the advancement of science at Elsevier.",
   "positions": [
     {
       "company": {
@@ -32,11 +32,24 @@ var resume = {
       },
       "description": [
         "Improving the efficiency of secondary healthcare in Wales by developing electronic forms using Orbeon Forms (XForms, XSLT, XML), HTML, CSS and Javascript.",
-        "Ensuring the systems being developed are well documented",
-        "Advocating the use of the Git versioning system and TFS",
-        "Leading efficient agile development by designing for code reuse and simple design"
+        "Ensuring the systems being developed are well documented.",
+        "Championing the use of the Git versioning system and TFS within the team.",
+        "Leading efficient agile development by designing for code reuse and simple design."
       ],
-      "title": "Senior Software Developer"
+      "title": "Senior Software Developer",
+      "technologies": [ "Orbeon Forms", "HTML5", "Javascript", "CSS",
+          "Node.js", "XForms", "XSLT", "XML", "Git", "TFS", "TFVC", "Gulp" ]
+    },
+    {
+      "startDate": {
+        "month": 4,
+        "year": 2014
+      },
+      "endDate": {
+        "month": 11,
+        "year": 2015
+      },
+      "description": "Overseas Experience (OE) travelling in South and North America"
     },
     {
       "company": {
@@ -57,16 +70,18 @@ var resume = {
         "year": 2010
       },
       "description": [
-        "Improved the capability of teams by researching and developing complex computer systems to meet stringent requirements and specifications",
-        "Increased the efficiency and resilience to services by developing programs and scripts in Perl, Bash and C to process data and monitor processing systems",
-        "Designed, documented and implemented Linux-heavy networks",
-        "Decreased time to deployment times designing and implementing automated Linux OS building and virtualisation using kernel virtual machine (KVM)",
-        "Increased the security of internal computer networks using operating system hardening and, network and firewall design.",
+        "Improved the capability of teams by researching and developing complex computer systems to meet stringent requirements and specifications.",
+        "Increased the efficiency and resilience to services by developing programs and scripts in Perl, Bash and C to process data and monitor processing systems.",
+        "Contributed to web applications for monitoring of processes and systems.",
+        "Designed, documented and implemented Linux-heavy networks.",
+        "Decreased deployment times by designing and implementing automated Linux operating system (OS) building and virtualisation using kernel virtual machine (KVM).",
+        //"Increased the security of internal computer networks using OS hardening and, network and firewall design.",
         "Knowledge expert on a number of data processing systems and virtual machine infrastructure.",
-        "Mentored and taught colleagues on computer systems and the Linux OS.",
-        "Purchased required hardware through internal procurement system dealing directly with suppliers."
+        "Mentored and taught colleagues on computer systems and the Linux OS."
+        //"Purchased required hardware through internal procurement system dealing directly with suppliers."
       ],
-      "title": "Computer Systems Engineer"
+      "title": "Computer Systems Engineer",
+      "technologies": [ "Linux", "Perl", "VMware", "Cisco Networking Equipment", "HTML", "Javascript" ]
     },
     {
       "company": {
@@ -87,12 +102,13 @@ var resume = {
         "year": 2010
       },
       "description": [
+        "Designed and implemented a Perl-based web interface for managing customer job requests.",
         "Administered three computer networks of around 50 computers total, which included workstations and high availability servers.",
         "Managed network and virtual infrastructures.",
-        "Implemented network monitoring through Nagios, SAN storage, Puppet configuration management and server viritualisation using VMware ESX and vSphere.",
-        "Designed a Perl-based web interface for managing customer job requests."
+        "Implemented network monitoring through Nagios, SAN storage, Puppet configuration management and server viritualisation using VMware ESX and vSphere."
       ],
-      "title": "Computer Systems Administrator"
+      "title": "Computer Systems Administrator",
+      "technologies": [ "Linux (Red Hat compatible)", "Perl", "VMware", "Cisco Networking Equipment", "EMC SANs", "Puppet", "HTML", "CSS", "Javascript" ]
     },
     {
       "company": {
@@ -115,7 +131,8 @@ var resume = {
       "description": [
         "Designed scripts in Perl and C for automated processing of data."
       ],
-      "title": "Software Developer"
+      "title": "Software Developer",
+      "technologies": [ "Perl", "C", "Bash", "Linux" ]
     },
     {
       "company": {
@@ -138,7 +155,8 @@ var resume = {
         "Designed automated home ventilation systems.",
         "Reverse-engineered and programmed Microchip PIC based automation controllers, and programmed Omron PLC controllers."
       ],
-      "title": "Design Engineer"
+      "title": "Design Engineer",
+      "technologies": [ "Omron PLCs", "C", "PIC microcontrollers" ]
     },
     {
       "company": {
@@ -160,7 +178,8 @@ var resume = {
         "Designed and developed web applications using HTML, CSS, Javascript, PHP, MySQL and Actionscript for multiple clients.",
         "Interacted with customers during entire development life cycle."
       ],
-      "title": "Web Application Engineer Contractor"
+      "title": "Web Application Engineer Contractor",
+      "technologies": [ "HTML", "Javascript", "CSS", "PHP", "MySQL", "Flash/ActionScript", "Wordpress" ]
     },
     {
       "company": {
@@ -187,7 +206,8 @@ var resume = {
       "description": [
         "Developed a radio log analyser and web-interface using Python and SQLite to detect and investigate inconsistencies in radio products."
       ],
-      "title": "Junior Design Engineer (Summer Internship)"
+      "title": "Junior Design Engineer (Summer Internship)",
+      "technologies": [ "Python", "Javascript", "HTML", "Javascript", "SQLite" ]
     },
     {
       "company": {
@@ -209,7 +229,8 @@ var resume = {
       "description": [
         "Developed client-side (Javascript, CSS and HTML) and server-side (PHP and MySQL) parts of the BrowserCRM interface"
       ],
-      "title": "Developer"
+      "title": "Developer",
+      "technologies": [ "Javascript", "HTML", "CSS", "PHP", "MySQL" ]
     }
   ],
   "education": [
@@ -497,10 +518,10 @@ function append(dom, child) {
 
 }
 
-function section(title) {
+function section(title, classes) {
   var el = createElement('section',
       createElement('h1', title));
-  el.className = title.toLowerCase();
+  el.className = title.toLowerCase().replace(' ', '_');
   return el;
 }
 
@@ -542,18 +563,42 @@ function position(data, obj) {
 
   append(obj, date(data));
 
-  obj.appendChild(document.createElement('h1')).innerHTML = data.title;
+  if (data.title) {
+    obj.appendChild(document.createElement('h1')).innerHTML = data.title;
+  }
   
-  el = obj.appendChild(linkLabel(data.company, 'p'));
-  el.className = 'company';
-  
+  if (data.company) {
+    el = obj.appendChild(linkLabel(data.company, 'p'));
+    el.className = 'company';
+  }
+
   if (data.location) {
     link = el.appendChild(loc(data.location));
   }
 
-  el = obj.appendChild(document.createElement('div'));
-  el.className = 'dateRange';
-  append(obj, description(data.description))
+  if (data.description) {
+    append(obj, description(data.description))
+  }
+
+  if (data.technologies) {
+    var technologies;
+    if (data.technologies instanceof Array) {
+      if (data.technologies.length > 1) {
+        technologies = '<i>' + data.technologies.slice(0, -1).join('</i>, <i>')
+            + '</i> and <i>' + data.technologies[data.technologies.length-1];
+      } else if (data.technologies.length === 1) {
+        technologies = data.techologies[0];
+      } else {
+        technologies = '';
+      }
+    } else {
+      technologies = data.technologies;
+    }
+
+    el = createElement('p', 'Technologies used: ' + technologies);
+    el.className = 'technologies';
+    append(obj, el);
+  }
 }
 
 function course(data, obj) {

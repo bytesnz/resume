@@ -4,8 +4,6 @@ html {
 }
 body > header {
   background: none;
-  background: url('qr-bytes-nz-4235.png') right top / auto 100% no-repeat;
-  background: url('qr-bytes-nz-4235.svg') right top / auto 100% no-repeat;
   color: #000;
   padding: 10px 40px 10px 0px;
 }
@@ -17,6 +15,16 @@ body > header h2 {
 }
 body > header input {
   display: none;
+}
+body > header a.qr {
+  display: block;
+  position: absolute;
+  background: url('qr-bytes-nz-4235.png') right top / auto 100% no-repeat;
+  background: url('qr-bytes-nz-4235.svg') right top / auto 100% no-repeat;
+  right: 0px;
+  top: 0px;
+  width: 90px;
+  height: 121px;
 }
 body > header div.contact > p {
   display: inline-block;
@@ -80,6 +88,9 @@ section article > date,
 section article > div,
 section article > ul {
   max-width: none;
+}
+section p.technologies {
+  display: none;
 }
 section .searchHit {
   background: none;

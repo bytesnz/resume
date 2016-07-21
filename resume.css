@@ -35,6 +35,9 @@ body > header input {
   margin: 10px 0px;
   width: 100%;
 }
+body > header a.qr {
+  display: none;
+}
 @media (min-width: 400px) {
   body > header input {
     position: absolute;
