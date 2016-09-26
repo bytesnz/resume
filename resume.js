@@ -31,7 +31,7 @@ var resume = {
         "year": 2015
       },
       "description": [
-        "Improving the efficiency of secondary healthcare in Wales by developing electronic forms using Orbeon Forms (XForms, XSLT, XML), HTML, CSS and Javascript.",
+        "Improving the efficiency of secondary healthcare in Wales by developing electronic forms using Orbeon Forms (XForms, XSLT, XML), HTML, CSS, Javascript and Node.js.",
         "Ensuring the systems being developed are well documented.",
         "Championing the use of the Git versioning system and TFS within the team.",
         "Leading efficient agile development by designing for code reuse and simple design."
