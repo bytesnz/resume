@@ -108,7 +108,9 @@ var resume = {
         "Implemented network monitoring through Nagios, SAN storage, Puppet configuration management and server viritualisation using VMware ESX and vSphere."
       ],
       "title": "Computer Systems Administrator",
-      "technologies": [ "Linux (Red Hat compatible)", "Perl", "VMware", "Cisco Networking Equipment", "EMC SANs", "Puppet", "HTML", "CSS", "Javascript" ]
+      "technologies": [ "Linux (Red Hat compatible)", "Perl", "VMware",
+          "Cisco Networking Equipment", "EMC SANs", "Puppet", "HTML", "CSS",
+          "Javascript" ]
     },
     {
       "company": {
@@ -160,8 +162,7 @@ var resume = {
     },
     {
       "company": {
-        "name": "Meld Computer Engineering",
-        "href": "https://www.meldce.com"
+        "name": "Contractor",
       },
       "endDate": {
         "year": 2008
@@ -178,8 +179,9 @@ var resume = {
         "Designed and developed web applications using HTML, CSS, Javascript, PHP, MySQL and Actionscript for multiple clients.",
         "Interacted with customers during entire development life cycle."
       ],
-      "title": "Web Application Engineer Contractor",
-      "technologies": [ "HTML", "Javascript", "CSS", "PHP", "MySQL", "Flash/ActionScript", "Wordpress" ]
+      "title": "Web Application Engineer",
+      "technologies": [ "HTML", "Javascript", "CSS", "PHP", "MySQL",
+          "ActionScript"]
     },
     {
       "company": {
@@ -207,7 +209,7 @@ var resume = {
         "Developed a radio log analyser and web-interface using Python and SQLite to detect and investigate inconsistencies in radio products."
       ],
       "title": "Junior Design Engineer (Summer Internship)",
-      "technologies": [ "Python", "Javascript", "HTML", "Javascript", "SQLite" ]
+      "technologies": [ "Python", "Javascript", "HTML", "Javascript", "CSS", "SQLite" ]
     },
     {
       "company": {
@@ -399,6 +401,15 @@ var resume = {
     }
   ],
   "memberships": [
+    {
+      "organisation": {
+        "name": "British Computer Society (BCS)",
+        "href": "http://www.bcs.org.uk"
+      },
+      "startDate": {
+        "year": 2016
+      }
+    },
     {
       "organisation": {
         "name": "Institute of Electrical and Electronic Engineers (IEEE)",
