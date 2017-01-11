@@ -10,7 +10,41 @@ var resume = {
     "I want to advanced our understanding of the environment, by using and sharing my knowledge in technology and software development, to help explore and present new science."
   ],
   "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialises in coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the advancement of science at Elsevier.",
+  "favouredTech": [ "Javascript", "Node.js", "HTML 5", "Jasmine", "TravisCI", "Git", "Vim", "Linux" ],
   "positions": [
+    {
+      "company": {
+        "name": "Scoota",
+        "href": "http://www.scoota.com"
+      },
+      "isCurrent": true,
+      "location": {
+        "country": {
+          "code": "gb",
+          "name": "United Kingdom"
+        },
+        "name": "London, United Kingdom"
+      },
+      "startDate": {
+        "month": 12,
+        "year": 2016
+      },
+      "description": {
+        "type": "p",
+        "elements": [
+          "So far at Scoota, I have developed:",
+          [
+            "a new look for their Rig Creatives editor using Angular 1",
+            "formats publishing using Amazon Lambda, triggered by Amazon SNS",
+            "new action handling for their placements"
+          ]
+        ]
+      },
+      "title": "Javascript Software Developer",
+      "technologies": [ "HTML5", "Javascript", "CSS", "Node.js",
+          "Amazon Lambda", "Amazon SNS", "Jenkins", "Angular", "Mocha", "Git",
+          "NPM", "Jira" ]
+    },
     {
       "company": {
         "id": 10077470,
@@ -30,15 +64,23 @@ var resume = {
         "month": 12,
         "year": 2015
       },
-      "description": [
+      "description": {
+        "type": "p",
+        "elements": [
+        "As Senior Software Developer at the NHS Wales Informatics Server (NWIS), I implemented electronic forms for clinical workers and the public to use using Orbeon Forms (XForms, XSLT & XML). This has involved creating custom controls, form logic and responsive styling using Javascript and CSS.",
+        "After a few months, I was leading the development of some of the forms and proactively leading efficient agile development by getting the team to use Git and TFS, and designing for code reuse and simple design.",
+        "I have implmented multiple Node.js-based REST endpoints for communicating with databases and the file system."
+        ]
+      },
+      /*[
         "Improving the efficiency of secondary healthcare in Wales by developing electronic forms using Orbeon Forms (XForms, XSLT, XML), HTML, CSS, Javascript and Node.js.",
         "Ensuring the systems being developed are well documented.",
         "Championing the use of the Git versioning system and TFS within the team.",
         "Leading efficient agile development by designing for code reuse and simple design."
-      ],
+      ],*/
       "title": "Senior Software Developer",
-      "technologies": [ "Orbeon Forms", "HTML5", "Javascript", "CSS",
-          "Node.js", "XForms", "XSLT", "XML", "Git", "TFS", "TFVC", "Gulp" ]
+      "technologies": [ "HTML5", "Javascript", "CSS", "Node.js",
+          "Orbeon Forms",  "XForms", "XSLT", "XML", "Git", "TFS", "TFVC", "Gulp" ]
     },
     {
       "startDate": {
@@ -69,7 +111,15 @@ var resume = {
         "month": 9,
         "year": 2010
       },
-      "description": [
+      "description": {
+        "type": "p",
+        "elements": [
+          "At the New Zealand Government, I designed, documented and implemented complete computer networks. A large amount of my time was focussed on researching and introducing new technology into these networks, such as automated building and virtualisation.",
+          "As a knowledge expert in the systems used, I mentored colleagues and provided information to various levels of management as required",
+
+        ]
+      },
+      /*[
         "Improved the capability of teams by researching and developing complex computer systems to meet stringent requirements and specifications.",
         "Increased the efficiency and resilience to services by developing programs and scripts in Perl, Bash and C to process data and monitor processing systems.",
         "Contributed to web applications for monitoring of processes and systems.",
@@ -79,7 +129,7 @@ var resume = {
         "Knowledge expert on a number of data processing systems and virtual machine infrastructure.",
         "Mentored and taught colleagues on computer systems and the Linux OS."
         //"Purchased required hardware through internal procurement system dealing directly with suppliers."
-      ],
+      ],*/
       "title": "Computer Systems Engineer",
       "technologies": [ "Linux", "Perl", "VMware", "Cisco Networking Equipment", "HTML", "Javascript" ]
     },
@@ -503,6 +553,12 @@ function createElement(type) {
   return dom;
 }
 
+/**
+ * Append element(s) to another element
+ *
+ * @param {HTMLDomElement} dom Element to append element(s) to
+ * @param {HTMLDomElement} ...child Elements to append to the given element
+ */
 function append(dom, child) {
   var args = Array.from(arguments);
   args.shift();
@@ -594,14 +650,7 @@ function position(data, obj) {
   if (data.technologies) {
     var technologies;
     if (data.technologies instanceof Array) {
-      if (data.technologies.length > 1) {
-        technologies = '<i>' + data.technologies.slice(0, -1).join('</i>, <i>')
-            + '</i> and <i>' + data.technologies[data.technologies.length-1];
-      } else if (data.technologies.length === 1) {
-        technologies = data.techologies[0];
-      } else {
-        technologies = '';
-      }
+      technologies = makeList(data.technologies, 'i');
     } else {
       technologies = data.technologies;
     }
@@ -610,6 +659,25 @@ function position(data, obj) {
     el.className = 'technologies';
     append(obj, el);
   }
+}
+
+function makeList(list, tag) {
+  var string = '',
+      start = (tag ? '<' + tag + '>' : ''),
+      end = (tag ? '</' + tag + '>' : '');
+
+  if (list instanceof Array) {
+    if (list.length > 1) {
+      string = start + list.slice(0, -1).join(end + ', ' + start)
+          + end + ' and ' + start + list[list.length-1] + end;
+    } else if (list.length === 1) {
+      string = start + data.techologies[0] + end;
+    } else {
+      string = '';
+    }
+  }
+
+  return string;
 }
 
 function course(data, obj) {
@@ -738,8 +806,9 @@ function description(data) {
     }
   } else if (data instanceof Object) {
     if (data.elements) {
+      // If data.type is set, create a div and then an type element for each element
       if (data.type) {
-        dom = createElement(data.type);
+        dom = createElement('div');
       } else {
         dom = createElement('p');
       }
@@ -748,7 +817,11 @@ function description(data) {
         } else if (typeof data.elements[d] === 'object') {
           append(dom, description(data.elements[d]));
         } else {
-          append(dom, document.createTextNode(data.elements[d]));
+          if (data.type) {
+            append(dom, createElement(data.type, data.elements[d]));
+          } else {
+            append(dom, document.createTextNode(data.elements[d]));
+          }
         }
       }
     }
@@ -775,7 +848,8 @@ main = document.querySelector('body > main');
 current = main;
 
 append(main,
-    append(section('Personal Profile'), createElement('p', resume.profile)),
+    append(section('Personal Profile'), createElement('p', resume.profile),
+        createElement('p', 'Favoured technologies: ' + makeList(resume.favouredTech, 'i'))),
     append(section('Employment'), list(resume.positions, position)),
     append(section('Professional Development'), list(resume.education, course)),
     append(section('Professional Memberships'), list(resume.memberships, memberships)),
