@@ -23,7 +23,6 @@ body > header a.qr {
   top: 0px;
 }
 body > header a.qr img {
-  width: 90px;
   height: 121px;
 }
 body > header div.contact > p {
@@ -48,7 +47,7 @@ section.interests {
 section > h1 {
   font-size: 1.2em;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 0px;
 }
 section a:after {
@@ -66,6 +65,7 @@ section li {
 }
 section article {
   background: none;
+  page-break-inside: avoid;
   margin: 0px;
   margin-bottom: 10px;
   padding: 0px 30px;

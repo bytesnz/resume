@@ -65,19 +65,28 @@ var resume = {
         "year": 2015
       },
       "description": {
-        "type": "p",
+        "type": "div",
         "elements": [
-        "As Senior Software Developer at the NHS Wales Informatics Server (NWIS), I implemented electronic forms for clinical workers and the public to use using Orbeon Forms (XForms, XSLT & XML). This has involved creating custom controls, form logic and responsive styling using Javascript and CSS.",
-        "After a few months, I was leading the development of some of the forms and proactively leading efficient agile development by getting the team to use Git and TFS, and designing for code reuse and simple design.",
-        "I have implmented multiple Node.js-based REST endpoints for communicating with databases and the file system."
+          {
+            "type": "p",
+            "class": "noprint",
+            "elements": [
+            "As Senior Software Developer at the NHS Wales Informatics Server (NWIS), I implemented electronic forms for clinical workers and the public to use using Orbeon Forms (XForms, XSLT & XML). This has involved creating custom controls, form logic and responsive styling using Javascript and CSS.",
+            "After a few months, I was leading the development of some of the forms and proactively leading efficient agile development by getting the team to use Git and TFS, and designing for code reuse and simple design.",
+            "I have implmented multiple Node.js-based REST endpoints for communicating with databases and the file system.",
+            ]
+          },
+          {
+            "class": "printonly",
+            "type": "li",
+            "elements": [
+              "Developed responsive electronic forms using Orbeon, HTML5, Javascript, and Node.js.",
+              "Ensured the systems developed were elegant and well documented.",
+              "Lead efficient agile development using Git and TFS."
+            ]
+          }
         ]
       },
-      /*[
-        "Improving the efficiency of secondary healthcare in Wales by developing electronic forms using Orbeon Forms (XForms, XSLT, XML), HTML, CSS, Javascript and Node.js.",
-        "Ensuring the systems being developed are well documented.",
-        "Championing the use of the Git versioning system and TFS within the team.",
-        "Leading efficient agile development by designing for code reuse and simple design."
-      ],*/
       "title": "Senior Software Developer",
       "technologies": [ "HTML5", "Javascript", "CSS", "Node.js",
           "Orbeon Forms",  "XForms", "XSLT", "XML", "Git", "TFS", "TFVC", "Gulp" ]
@@ -112,28 +121,38 @@ var resume = {
         "year": 2010
       },
       "description": {
-        "type": "p",
+        "type": "div",
         "elements": [
-          "At the New Zealand Government, I designed, documented and implemented complete computer networks. A large amount of my time was focussed on researching and introducing new technology into these networks, such as automated building and virtualisation.",
-          "As a knowledge expert in the systems used, I mentored colleagues and provided information to various levels of management as required",
+          {
+            "type": "p",
+            "class": "noprint",
+            "elements": [
+              "At the New Zealand Government, I designed, documented and implemented complete computer networks. A large amount of my time was focussed on researching and introducing new technology into these networks, such as automated building and virtualisation.",
+              "As a knowledge expert in the systems used, I mentored colleagues and provided information to various levels of management as required",
 
+            ]
+          },
+          {
+            "type": "li",
+            "class": "printonly",
+            "elements": [
+              "Developed full computer systems for data processing",
+              "Developed programs and scripts in in Perl, Bash and C to process data and monitor processing systems.",
+              "Developed web applications for monitoring of processes and systems using Javascript and Perl",
+              //"Decreased deployment times by designing and implementing automated Linux operating system (OS) building and virtualisation using kernel virtual machine (KVM).",
+              //"Increased the security of internal computer networks using OS hardening and, network and firewall design.",
+              //"Knowledge expert on a number of data processing systems and virtual machine infrastructure.",
+              //"Mentored and taught colleagues on computer systems and the Linux OS."
+              //"Purchased required hardware through internal procurement system dealing directly with suppliers."
+            ]
+          }
         ]
       },
-      /*[
-        "Improved the capability of teams by researching and developing complex computer systems to meet stringent requirements and specifications.",
-        "Increased the efficiency and resilience to services by developing programs and scripts in Perl, Bash and C to process data and monitor processing systems.",
-        "Contributed to web applications for monitoring of processes and systems.",
-        "Designed, documented and implemented Linux-heavy networks.",
-        "Decreased deployment times by designing and implementing automated Linux operating system (OS) building and virtualisation using kernel virtual machine (KVM).",
-        //"Increased the security of internal computer networks using OS hardening and, network and firewall design.",
-        "Knowledge expert on a number of data processing systems and virtual machine infrastructure.",
-        "Mentored and taught colleagues on computer systems and the Linux OS."
-        //"Purchased required hardware through internal procurement system dealing directly with suppliers."
-      ],*/
       "title": "Computer Systems Engineer",
       "technologies": [ "Linux", "Perl", "VMware", "Cisco Networking Equipment", "HTML", "Javascript" ]
     },
     {
+      "title": "Computer Systems Administrator",
       "company": {
         "name": "New Zealand Government",
         "href": "https://www.govt.nz/"
@@ -153,14 +172,12 @@ var resume = {
       },
       "description": [
         "Designed and implemented a Perl-based web interface for managing customer job requests.",
-        "Administered three computer networks of around 50 computers total, which included workstations and high availability servers.",
-        "Managed network and virtual infrastructures.",
+        "Administered three computer networks of around 50 computers total, including workstations and high availability servers.",
         "Implemented network monitoring through Nagios, SAN storage, Puppet configuration management and server viritualisation using VMware ESX and vSphere."
       ],
-      "title": "Computer Systems Administrator",
-      "technologies": [ "Linux (Red Hat compatible)", "Perl", "VMware",
-          "Cisco Networking Equipment", "EMC SANs", "Puppet", "HTML", "CSS",
-          "Javascript" ]
+      "technologies": [ "Linux (Red Hat compatible)", "Perl", "HTML", "CSS",
+          "Javascript", "VMware", "Cisco Networking Equipment", "EMC SANs",
+          "Puppet"]
     },
     {
       "company": {
@@ -226,7 +243,7 @@ var resume = {
         "year": 2004
       },
       "description": [
-        "Designed and developed web applications using HTML, CSS, Javascript, PHP, MySQL and Actionscript for multiple clients.",
+        "Developed web applications using HTML, CSS, Javascript, PHP and MySQL.",
         "Interacted with customers during entire development life cycle."
       ],
       "title": "Web Application Engineer",
@@ -405,8 +422,7 @@ var resume = {
         "elements": [
           "Specialising in:",
           [
-            "Computer Hardware",
-            "Computer Software",
+            "Computer Hardware & Software",
             "Communications",
             "Electronic Materials & Device Engineering",
             "Engineering Management"
@@ -808,9 +824,16 @@ function description(data) {
     if (data.elements) {
       // If data.type is set, create a div and then an type element for each element
       if (data.type) {
-        dom = createElement('div');
+        if (data.type === 'li') {
+          dom = createElement('ul');
+        } else {
+          dom = createElement('div');
+        }
       } else {
         dom = createElement('p');
+      }
+      if (data.class) {
+        dom.classList.add(data.class);
       }
       for (d in data.elements) {
         if (typeof data.elements[d] === 'undefined') {

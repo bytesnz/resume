@@ -170,3 +170,6 @@ section.profile > h1:before {
 section.profile > p {
   padding: 10px 5%;
 }
+.printOnly {
+  display: none;
+}
