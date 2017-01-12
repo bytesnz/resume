@@ -9,7 +9,7 @@ var resume = {
     "During my previous experiences, I have contributed both ideas, and 1s and 0s to a diverse range of projects, developing software for a range of platforms, from web applications to microcontrollers. I enjoy understanding systems down to the I/O level, developing logical solutions to problems and seeing the solutions through to completion.",
     "I want to advanced our understanding of the environment, by using and sharing my knowledge in technology and software development, to help explore and present new science."
   ],
-  "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialises in coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the advancement of science at Elsevier.",
+  "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialising in proactive problem solving, and coding elegant, responsive web applications. Looking for a Node.js engineering role with opportunites in UXD, GIS, and data presentation.",
   "favouredTech": [ "Javascript", "Node.js", "HTML 5", "Jasmine", "TravisCI", "Git", "Vim", "Linux" ],
   "positions": [
     {
@@ -40,7 +40,7 @@ var resume = {
           ]
         ]
       },
-      "title": "Javascript Software Developer",
+      "title": "Javascript Developer",
       "technologies": [ "HTML5", "Javascript", "CSS", "Node.js",
           "Amazon Lambda", "Amazon SNS", "Jenkins", "Angular", "Mocha", "Git",
           "NPM", "Jira" ]
