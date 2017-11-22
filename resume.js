@@ -9,9 +9,48 @@ var resume = {
     "During my previous experiences, I have contributed both ideas, and 1s and 0s to a diverse range of projects, developing software for a range of platforms, from web applications to microcontrollers. I enjoy understanding systems down to the I/O level, developing logical solutions to problems and seeing the solutions through to completion.",
     "I want to advanced our understanding of the environment, by using and sharing my knowledge in technology and software development, to help explore and present new science."
   ],
-  "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialising in proactive problem solving, and coding elegant, responsive web applications. Looking for a Node.js engineering role with opportunites in UXD, GIS, and data presentation.",
+  "profile": "A computer engineer with software in the brain and 8+ years experience in developing web applications. Specialises in coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the advancement of science at Elsevier.",
   "favouredTech": [ "Javascript", "Node.js", "HTML 5", "Jasmine", "TravisCI", "Git", "Vim", "Linux" ],
   "positions": [
+    {
+      "company": {
+        "name": "Reef Doctor",
+        "href": "http://www.reefdoctor.org"
+      },
+      "isCurrent": true,
+      "location": {
+        "country": {
+          "code": "mg",
+          "name": "Madagascar"
+        },
+        "name": "Ifaty, Madagascar"
+      },
+      "startDate": {
+        "month": 06,
+        "year": 2017
+      },
+      "endDate": {
+        "month": 12,
+        "year": 2017
+      },
+      "description": {
+        "type": "p",
+        "elements": [
+          "During my internship with Reef Doctor, I:",
+          [
+            "carried out maintenance on dive equipment, including replacing batteries in dive computers and assisting in cylinder maintenance and inspections",
+            "carried out maintenance on electrical equipment, including plug boards",
+            "redesigned the local network to include file shares, web server and database and a central computer",
+            "created scripts to clean, correlate and import fisheries catch and effort data into the central database",
+            "developed a database and web application for storing and analysing Reef Doctor data",
+            "trained as a Padi Divemaster"
+          ]
+        ]
+      },
+      "title": "Scientific Research Assistant and Divemaster Intern",
+      "technologies": [ "React", "Redux", "MongoDB", "HTML5", "Javascript",
+          "CSS", "Node.js", "C", "Git" ]
+    },
     {
       "company": {
         "name": "Scoota",
@@ -29,18 +68,22 @@ var resume = {
         "month": 12,
         "year": 2016
       },
+      "endDate": {
+        "month": 06,
+        "year": 2017
+      },
       "description": {
         "type": "p",
         "elements": [
-          "So far at Scoota, I have developed:",
+          "As a Javascript developer at Scoota, I:",
           [
-            "a new look for their Rig Creatives editor using Angular 1",
-            "formats publishing using Amazon Lambda, triggered by Amazon SNS",
-            "new action handling for their placements"
+            "developed their new ad management platform using Angular 2",
+            "a implemnted a new look for their Ad creatives editor using Angular 1",
+            "developed ad formats publishing using Amazon Lambda, triggered by Amazon SNS",
           ]
         ]
       },
-      "title": "Javascript Developer",
+      "title": "Javascript Software Developer",
       "technologies": [ "HTML5", "Javascript", "CSS", "Node.js",
           "Amazon Lambda", "Amazon SNS", "Jenkins", "Angular", "Mocha", "Git",
           "NPM", "Jira" ]
@@ -64,27 +107,20 @@ var resume = {
         "month": 12,
         "year": 2015
       },
+      "endDate": {
+        "month": 12,
+        "year": 2016
+      },
       "description": {
-        "type": "div",
+        "type": "p",
         "elements": [
-          {
-            "type": "p",
-            "class": "noprint",
-            "elements": [
-            "As Senior Software Developer at the NHS Wales Informatics Server (NWIS), I implemented electronic forms for clinical workers and the public to use using Orbeon Forms (XForms, XSLT & XML). This has involved creating custom controls, form logic and responsive styling using Javascript and CSS.",
-            "After a few months, I was leading the development of some of the forms and proactively leading efficient agile development by getting the team to use Git and TFS, and designing for code reuse and simple design.",
-            "I have implmented multiple Node.js-based REST endpoints for communicating with databases and the file system.",
-            ]
-          },
-          {
-            "class": "printonly",
-            "type": "li",
-            "elements": [
-              "Developed responsive electronic forms using Orbeon, HTML5, Javascript, and Node.js.",
-              "Ensured the systems developed were elegant and well documented.",
-              "Lead efficient agile development using Git and TFS."
-            ]
-          }
+          "As Senior Software Developer at the NHS Wales Informatics Server (NWIS), I:",
+          [
+            "developed electronic forms using Orbeon Forms (XForms, XSLT, XML), HTML, CSS, Javascript and Node.js",
+            "lead the development of some forms and mentored other members of the team during development",
+            "championed the use of the Git versioning system and TFS within the team",
+            "lead efficient agile development by designing for code reuse"
+          ]
         ]
       },
       "title": "Senior Software Developer",
@@ -121,38 +157,28 @@ var resume = {
         "year": 2010
       },
       "description": {
-        "type": "div",
+        "type": "p",
         "elements": [
-          {
-            "type": "p",
-            "class": "noprint",
-            "elements": [
-              "At the New Zealand Government, I designed, documented and implemented complete computer networks. A large amount of my time was focussed on researching and introducing new technology into these networks, such as automated building and virtualisation.",
-              "As a knowledge expert in the systems used, I mentored colleagues and provided information to various levels of management as required",
+          "At the New Zealand Government, I designed, documented and implemented complete computer networks. A large amount of my time was focussed on researching and introducing new technology into these networks, such as automated building and virtualisation.",
+          "As a knowledge expert in the systems used, I mentored colleagues and provided information to various levels of management as required",
 
-            ]
-          },
-          {
-            "type": "li",
-            "class": "printonly",
-            "elements": [
-              "Developed full computer systems for data processing",
-              "Developed programs and scripts in in Perl, Bash and C to process data and monitor processing systems.",
-              "Developed web applications for monitoring of processes and systems using Javascript and Perl",
-              //"Decreased deployment times by designing and implementing automated Linux operating system (OS) building and virtualisation using kernel virtual machine (KVM).",
-              //"Increased the security of internal computer networks using OS hardening and, network and firewall design.",
-              //"Knowledge expert on a number of data processing systems and virtual machine infrastructure.",
-              //"Mentored and taught colleagues on computer systems and the Linux OS."
-              //"Purchased required hardware through internal procurement system dealing directly with suppliers."
-            ]
-          }
         ]
       },
+      /*[
+        "Improved the capability of teams by researching and developing complex computer systems to meet stringent requirements and specifications.",
+        "Increased the efficiency and resilience to services by developing programs and scripts in Perl, Bash and C to process data and monitor processing systems.",
+        "Contributed to web applications for monitoring of processes and systems.",
+        "Designed, documented and implemented Linux-heavy networks.",
+        "Decreased deployment times by designing and implementing automated Linux operating system (OS) building and virtualisation using kernel virtual machine (KVM).",
+        //"Increased the security of internal computer networks using OS hardening and, network and firewall design.",
+        "Knowledge expert on a number of data processing systems and virtual machine infrastructure.",
+        "Mentored and taught colleagues on computer systems and the Linux OS."
+        //"Purchased required hardware through internal procurement system dealing directly with suppliers."
+      ],*/
       "title": "Computer Systems Engineer",
       "technologies": [ "Linux", "Perl", "VMware", "Cisco Networking Equipment", "HTML", "Javascript" ]
     },
     {
-      "title": "Computer Systems Administrator",
       "company": {
         "name": "New Zealand Government",
         "href": "https://www.govt.nz/"
@@ -172,12 +198,14 @@ var resume = {
       },
       "description": [
         "Designed and implemented a Perl-based web interface for managing customer job requests.",
-        "Administered three computer networks of around 50 computers total, including workstations and high availability servers.",
+        "Administered three computer networks of around 50 computers total, which included workstations and high availability servers.",
+        "Managed network and virtual infrastructures.",
         "Implemented network monitoring through Nagios, SAN storage, Puppet configuration management and server viritualisation using VMware ESX and vSphere."
       ],
-      "technologies": [ "Linux (Red Hat compatible)", "Perl", "HTML", "CSS",
-          "Javascript", "VMware", "Cisco Networking Equipment", "EMC SANs",
-          "Puppet"]
+      "title": "Computer Systems Administrator",
+      "technologies": [ "Linux (Red Hat compatible)", "Perl", "VMware",
+          "Cisco Networking Equipment", "EMC SANs", "Puppet", "HTML", "CSS",
+          "Javascript" ]
     },
     {
       "company": {
@@ -243,7 +271,7 @@ var resume = {
         "year": 2004
       },
       "description": [
-        "Developed web applications using HTML, CSS, Javascript, PHP and MySQL.",
+        "Designed and developed web applications using HTML, CSS, Javascript, PHP, MySQL and Actionscript for multiple clients.",
         "Interacted with customers during entire development life cycle."
       ],
       "title": "Web Application Engineer",
@@ -422,7 +450,8 @@ var resume = {
         "elements": [
           "Specialising in:",
           [
-            "Computer Hardware & Software",
+            "Computer Hardware",
+            "Computer Software",
             "Communications",
             "Electronic Materials & Device Engineering",
             "Engineering Management"
@@ -824,16 +853,9 @@ function description(data) {
     if (data.elements) {
       // If data.type is set, create a div and then an type element for each element
       if (data.type) {
-        if (data.type === 'li') {
-          dom = createElement('ul');
-        } else {
-          dom = createElement('div');
-        }
+        dom = createElement('div');
       } else {
         dom = createElement('p');
-      }
-      if (data.class) {
-        dom.classList.add(data.class);
       }
       for (d in data.elements) {
         if (typeof data.elements[d] === 'undefined') {
