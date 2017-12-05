@@ -4,7 +4,7 @@
  * Copyright Jack Farley 2016
  */
 var resume = {
-  "profile": "A web application engineer with software in the brain and 8+ years experience in developing web applications. Specialised in proactive problem solving, and coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the understanding of the environment by using engineering knowledge and skills to help explore and present new science.",
+  "profile": "A web application engineer with software in the brain and 8+ years experience in developing web applications. Specialised in proactive problem solving, and coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the understanding of science and the environment by using engineering knowledge and skills to help explore and present new science.",
   "favouredTech": [ "Javascript", "Node.js", "HTML 5", "Ava", "TravisCI", "Git", "Vim", "Linux", "PlotlyJS", "Leaflet.js" ],
   "positions": [
     {
