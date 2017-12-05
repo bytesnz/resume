@@ -5,7 +5,7 @@
  */
 var resume = {
   "profile": "A web application engineer with software in the brain and 8+ years experience in developing web applications. Specialised in proactive problem solving, and coding elegant, responsive web applications for data-rich environments. Looking to contribute towards the understanding of the environment by using engineering knowledge and skills to help explore and present new science.",
-  "favouredTech": [ "Javascript", "Node.js", "HTML 5", "Ava", "TravisCI", "Git", "Vim", "Linux", "PlotlyJS" ],
+  "favouredTech": [ "Javascript", "Node.js", "HTML 5", "Ava", "TravisCI", "Git", "Vim", "Linux", "PlotlyJS", "Leaflet.js" ],
   "positions": [
     {
       "company": {
