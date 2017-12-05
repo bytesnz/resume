@@ -55,6 +55,7 @@ section a:after {
 }
 section > p {
   margin: 0px;
+  padding: 5px 0px;
 }
 section > h1,
 section > p {
@@ -67,8 +68,9 @@ section article {
   background: none;
   page-break-inside: avoid;
   margin: 0px;
-  margin-bottom: 10px;
-  padding: 0px 30px;
+  margin-bottom: 20px;
+  padding: 0px;
+  page-break-inside: avoid;
 }
 section article h1 {
   font-size: 1.1em;
